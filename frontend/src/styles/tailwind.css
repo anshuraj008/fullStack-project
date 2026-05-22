@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --color-background: #FEFEFE; /* near-white */
+    --color-foreground: #2D2D2D; /* charcoal */
+    --color-border: #F0E6ED; /* light pink-gray */
+    --color-input: #FEFEFE; /* near-white */
+    --color-ring: #F8BBD9; /* baby-pink */
+    --color-card: #F9F7F8; /* warm-neutral */
+    --color-card-foreground: #2D2D2D; /* charcoal */
+    --color-popover: #FEFEFE; /* near-white */
+    --color-popover-foreground: #2D2D2D; /* charcoal */
+    --color-muted: #F9F7F8; /* warm-neutral */
+    --color-muted-foreground: #6B6B6B; /* medium-gray */
+
+    /* Brand Colors */
+    --color-primary: #F8BBD9; /* baby-pink */
+    --color-primary-foreground: #2D2D2D; /* charcoal */
+    --color-secondary: #E8A5C8; /* deeper-pink */
+    --color-secondary-foreground: #2D2D2D; /* charcoal */
+    --color-accent: #FFE4E1; /* misty-rose */
+    --color-accent-foreground: #2D2D2D; /* charcoal */
+
+    /* Status Colors */
+    --color-success: #A8D5A8; /* soft-sage-green */
+    --color-success-foreground: #2D2D2D; /* charcoal */
+    --color-warning: #F5C842; /* warm-golden-yellow */
+    --color-warning-foreground: #2D2D2D; /* charcoal */
+    --color-error: #E8A5A5; /* muted-coral */
+    --color-error-foreground: #2D2D2D; /* charcoal */
+    --color-destructive: #E8A5A5; /* muted-coral */
+    --color-destructive-foreground: #2D2D2D; /* charcoal */
+
+    /* Text Colors */
+    --color-text-primary: #2D2D2D; /* charcoal */
+    --color-text-secondary: #6B6B6B; /* medium-gray */
+    --color-surface: #F9F7F8; /* warm-neutral */
+
+    /* Shadow Variables */
+    --shadow-soft: 0 2px 4px rgba(248, 187, 217, 0.15);
+    --shadow-medium: 0 4px 8px rgba(248, 187, 217, 0.15);
+    --shadow-large: 0 8px 16px rgba(248, 187, 217, 0.15);
+    --shadow-xl: 0 16px 32px rgba(248, 187, 217, 0.15);
+
+    /* Border Radius */
+    --radius: 4px;
+    --radius-lg: 8px;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+
+  body, p, span, div, button, input, textarea, select {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .font-caption {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer utilities {
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .shadow-large {
+    box-shadow: var(--shadow-large);
+  }
+  
+  .shadow-xl-custom {
+    box-shadow: var(--shadow-xl);
+  }
+
+  .transition-smooth {
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .transition-large {
+    transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
