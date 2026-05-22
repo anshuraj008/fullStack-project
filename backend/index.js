@@ -112,8 +112,18 @@ export default async function handler(req, res) {
 if (process.env.NODE_ENV !== 'production') {
   connectToDatabase()
     .then(() => {
-      app.listen(PORT, () => {
+      const server = app.listen(PORT, () => {
         console.log(`🚀 Server running on http://localhost:${PORT}`);
+      });
+
+      server.on('error', (error) => {
+        if (error.code === 'EADDRINUSE') {
+          console.error(`Port ${PORT} is already in use. Stop the existing backend process or set a different PORT.`);
+          process.exit(1);
+        }
+
+        console.error('Server startup error:', error);
+        process.exit(1);
       });
     })
     .catch((err) => {
