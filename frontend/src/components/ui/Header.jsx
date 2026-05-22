@@ -89,7 +89,7 @@ const Header = () => {
         setAuthNotice("Signed in successfully");
         setTimeout(() => setAuthNotice(""), 3000);
         // Both admin and customer stay in customer frontend
-        navigate("/3d-custom-cake-designer");
+        navigate("/3d-interactive-homepage");
       } else {
         throw new Error('Login failed');
       }

@@ -21,8 +21,14 @@ export const AuthProvider = ({ children }) => {
     const storedUser = localStorage.getItem('auth_user');
 
     if (storedToken && storedUser) {
-      setToken(storedToken);
-      setUser(JSON.parse(storedUser));
+      try {
+        setToken(storedToken);
+        setUser(JSON.parse(storedUser));
+      } catch (error) {
+        console.error('Failed to restore auth state:', error);
+        localStorage.removeItem('auth_token');
+        localStorage.removeItem('auth_user');
+      }
     }
     setLoading(false);
   }, []);
@@ -61,7 +67,8 @@ export const AuthProvider = ({ children }) => {
     isAuthenticated,
     isAdmin,
     isCustomer,
-    loading
+    loading,
+    isLoading: loading
   };
 
   return (

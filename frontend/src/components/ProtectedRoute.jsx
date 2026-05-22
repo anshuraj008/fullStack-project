@@ -7,10 +7,10 @@ import { useAuth } from '../utils/AuthContext';
  * @param {string} requiredRole - 'customer', 'admin', or null for authenticated users only
  */
 const ProtectedRoute = ({ requiredRole = null }) => {
-  const { user, isLoading } = useAuth();
+  const { user, loading } = useAuth();
 
   // Show loading state while checking authentication
-  if (isLoading) {
+  if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-rose-50 via-white to-pink-50">
         <div className="text-center">

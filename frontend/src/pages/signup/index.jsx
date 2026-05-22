@@ -11,6 +11,7 @@ import Button from "../../components/ui/Button";
 import axios from "axios";
 
 const SignupPage = () => {
+  const postAuthRedirect = "/3d-interactive-homepage";
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -114,7 +115,7 @@ const SignupPage = () => {
         navigate("/login");
       } else {
         login(res.data.token, res.data.user);
-        navigate("/3d-custom-cake-designer");
+        navigate(postAuthRedirect, { replace: true });
       }
     } catch (err) {
       alert(err?.response?.data?.message || "Registration failed");

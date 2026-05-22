@@ -11,6 +11,7 @@ import Button from "../../components/ui/Button";
 import axios from "axios";
 
 const LoginPage = () => {
+  const postAuthRedirect = "/3d-interactive-homepage";
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -54,12 +55,7 @@ const LoginPage = () => {
 
       login(res.data.token, res.data.user);
 
-      // Navigate based on account type - both stay in customer frontend
-      if (formData.accountType === 'admin') {
-        navigate("/3d-custom-cake-designer"); // Admin sees customer frontend with admin navbar
-      } else {
-        navigate("/3d-custom-cake-designer");
-      }
+      navigate(postAuthRedirect, { replace: true });
     } catch (err) {
       console.error("Login error:", err);
       console.error("Error response:", err.response);
