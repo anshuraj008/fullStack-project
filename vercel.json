@@ -19,27 +19,11 @@
       "dest": "/backend/index.js"
     },
     {
-      "src": "/assets/(.*)",
-      "dest": "/frontend/build/assets/$1"
-    },
-    {
-      "src": "/manifest.json",
-      "dest": "/frontend/build/manifest.json"
-    },
-    {
-      "src": "/favicon.ico",
-      "dest": "/frontend/build/favicon.ico"
-    },
-    {
-      "src": "/robots.txt",
-      "dest": "/frontend/build/robots.txt"
-    },
-    {
       "handle": "filesystem"
     },
     {
       "src": "/(.*)",
-      "dest": "/frontend/build/index.html"
+      "dest": "/index.html"
     }
   ]
 }
