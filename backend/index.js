@@ -20,8 +20,59 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const CLIENT_URL = process.env.CLIENT_URL || 'http://localhost:4028';
 
+function normalizeOrigin(value) {
+  if (!value) return null;
+  const trimmed = value.trim().replace(/\/$/, '');
+  return trimmed || null;
+}
+
+function buildAllowedOrigins() {
+  const configured = [
+    process.env.CLIENT_URL,
+    process.env.FRONTEND_URL,
+    process.env.VERCEL_PROJECT_PRODUCTION_URL
+      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+      : null,
+    ...(process.env.ALLOWED_ORIGINS || '').split(',')
+  ];
+
+  const defaults = [
+    'http://localhost:4028',
+    'http://localhost:5173'
+  ];
+
+  return new Set(
+    [...configured, ...defaults]
+      .map(normalizeOrigin)
+      .filter(Boolean)
+  );
+}
+
+const allowedOrigins = buildAllowedOrigins();
+
+function isAllowedOrigin(origin) {
+  const normalizedOrigin = normalizeOrigin(origin);
+  if (!normalizedOrigin) return true;
+  if (allowedOrigins.has(normalizedOrigin)) return true;
+
+  // Allow Vercel preview domains for this project.
+  if (/^https:\/\/.+\.vercel\.app$/i.test(normalizedOrigin)) {
+    return true;
+  }
+
+  return false;
+}
+
 // Middlewares
-app.use(cors({ origin: CLIENT_URL, credentials: true }));
+app.use(cors({
+  origin(origin, callback) {
+    if (isAllowedOrigin(origin)) {
+      return callback(null, true);
+    }
+    return callback(new Error('Not allowed by CORS'));
+  },
+  credentials: true,
+}));
 app.use(express.json());
 app.use(morgan('dev'));
 
