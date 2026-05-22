@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Header from '../../components/ui/Header';
 import Icon from '../../components/AppIcon';
+import api from '../../utils/api';
 
 const Contact = () => {
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
@@ -13,14 +14,21 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     // Basic client-side validation
     if (!form.name || !form.email || !form.message) {
       setStatus({ type: 'error', message: 'Please fill in your name, email, and message.' });
       return;
     }
-    // No backend configured; simulate success UX
-    setStatus({ type: 'success', message: 'Thanks! Your message has been sent.' });
-    setForm({ name: '', email: '', subject: '', message: '' });
+
+    try {
+      await api.post('/api/contact', form);
+      setStatus({ type: 'success', message: 'Thanks! Your message has been sent.' });
+      setForm({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      const message = error?.response?.data?.message || 'Unable to send your message right now. Please try again.';
+      setStatus({ type: 'error', message });
+    }
   };
 
   return (

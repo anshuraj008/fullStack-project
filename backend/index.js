@@ -12,6 +12,7 @@ import adminCustomerRouter from './routes/adminCustomer.router.js';
 import adminDeliveryRouter from './routes/adminDelivery.router.js';
 import adminStaffRouter from './routes/adminStaff.router.js';
 import adminCustomizationRouter from './routes/adminCustomization.router.js';
+import contactRouter from './routes/contact.router.js';
 
 dotenv.config();
 
@@ -27,6 +28,7 @@ app.use(morgan('dev'));
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/orders', orderRouter);
+app.use('/api/contact', contactRouter);
 
 // Admin routes
 app.use('/api/admin/dashboard', adminDashboardRouter);
@@ -48,6 +50,7 @@ app.get('/', (req, res) => {
     endpoints: [
       '/api/auth',
       '/api/orders',
+      '/api/contact',
       '/api/admin/dashboard',
       '/api/admin/products',
       '/api/admin/orders',
