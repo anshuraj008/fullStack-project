@@ -364,13 +364,13 @@ const Menu = () => {
                               />
                               <button
                                 onClick={() => removeCartItem(item.id, index)}
-                                className="absolute top-2 right-2 bg-red-500 text-white p-2 rounded-full hover:bg-red-600"
+                                className="absolute top-2 right-2 bg-[#8C5A3C] text-white p-2 rounded-full hover:bg-[#74482F]"
                               >
                                 <FiX size={18} />
                               </button>
                               <button
                                 onClick={() => viewItemDetails(item, index)}
-                                className="absolute top-2 left-2 bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600"
+                                className="absolute top-2 left-2 bg-[#8C5A3C] text-white p-2 rounded-full hover:bg-[#74482F]"
                                 title="View Details"
                               >
                                 <FiEye size={18} />
@@ -389,7 +389,7 @@ const Menu = () => {
                               <select
                                 value={item.selectedSize}
                                 onChange={(e) => updateCartSize(index, e.target.value)}
-                                className="w-full px-2 py-1 border border-gray-300 rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#2F6D66]"
+                                className="w-full px-2 py-1 border border-gray-300 rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#8C5A3C]"
                               >
                                 {item.sizes.map((size) => (
                                   <option key={size} value={size}>
@@ -405,7 +405,7 @@ const Menu = () => {
                               <select
                                 value={item.selectedFlavor}
                                 onChange={(e) => updateCartFlavor(index, e.target.value)}
-                                className="w-full px-2 py-1 border border-gray-300 rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#2F6D66]"
+                                className="w-full px-2 py-1 border border-gray-300 rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#8C5A3C]"
                               >
                                 {item.flavors.map((flavor) => (
                                   <option key={flavor} value={flavor}>
@@ -494,19 +494,19 @@ const Menu = () => {
               <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="mb-12 bg-gradient-to-r from-[#F1F6F3] to-[#EAF2EF] rounded-xl border-2 border-[#D8E5E1] p-8 shadow-medium"
+                className="mb-12 bg-gradient-to-r from-[#FFF8F1] to-[#F6EFE6] rounded-xl border-2 border-[#E7D7CA] p-8 shadow-medium"
               >
                 <div className="flex items-center justify-between mb-6">
                   <div>
                     <h2 className="text-2xl font-bold text-[#2B231D] flex items-center gap-2">
-                      <Icon name="Zap" size={24} className="text-[#2F6D66]" />
+                      <Icon name="Zap" size={24} className="text-[#8C5A3C]" />
                       Quick Add Section
                     </h2>
                     <p className="text-[#6E6258] mt-1">{quickAddItems.length} item(s) ready to add</p>
                   </div>
                   <button
                     onClick={() => setShowQuickAdd(!showQuickAdd)}
-                    className="text-[#2F6D66] hover:text-[#8C5A3C] text-2xl"
+                    className="text-[#8C5A3C] hover:text-[#74482F] text-2xl"
                   >
                     {showQuickAdd ? '−' : '+'}
                   </button>
@@ -547,7 +547,7 @@ const Menu = () => {
                           </div>
 
                           <div className="flex items-center justify-between">
-                            <div className="text-lg font-bold text-[#2F6D66]">
+                            <div className="text-lg font-bold text-[#8C5A3C]">
                               {formatPrice(item.price)}
                             </div>
                             <div className="flex items-center gap-2 bg-gray-100 rounded-lg">
@@ -576,13 +576,13 @@ const Menu = () => {
                     <div className="bg-white rounded-lg p-4 border border-[#D8E5E1]">
                       <div className="flex items-center justify-between mb-4">
                         <span className="text-gray-700 font-semibold">Total Items:</span>
-                        <span className="text-2xl font-bold text-[#2F6D66]">
+                        <span className="text-2xl font-bold text-[#8C5A3C]">
                           {quickAddItems.reduce((sum, item) => sum + item.quantity, 0)}
                         </span>
                       </div>
                       <div className="flex items-center justify-between mb-4 pb-4 border-b border-gray-200">
                         <span className="text-gray-700 font-semibold">Subtotal:</span>
-                        <span className="text-2xl font-bold text-[#2F6D66]">
+                        <span className="text-2xl font-bold text-[#8C5A3C]">
                           {formatPrice(quickAddItems.reduce((sum, item) => sum + (item.price * item.quantity), 0))}
                         </span>
                       </div>
@@ -596,7 +596,7 @@ const Menu = () => {
                         </button>
                         <button
                           onClick={addQuickItemsToCart}
-                          className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-medium transition flex items-center justify-center gap-2"
+                          className="flex-1 px-4 py-2 bg-[#8C5A3C] text-white rounded-lg hover:bg-[#74482F] font-medium transition flex items-center justify-center gap-2"
                         >
                           <FiPlus size={18} />
                           Add to Cart
@@ -662,7 +662,7 @@ const Menu = () => {
                         </div>
                       )}
                       {item.customizable && (
-                        <div className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                        <div className="absolute top-4 right-4 bg-[#8C5A3C] text-white px-3 py-1 rounded-full text-sm font-medium">
                           Customizable
                         </div>
                       )}
@@ -739,7 +739,7 @@ const Menu = () => {
                             size="lg"
                             iconName="Zap"
                             onClick={() => quickAddItem(item)}
-                            className="border-blue-500 text-blue-600 hover:bg-blue-50"
+                            className="border-[#8C5A3C] text-[#8C5A3C] hover:bg-[#F6EFE6]"
                           >
                             Quick Add
                           </Button>
@@ -821,7 +821,7 @@ const Menu = () => {
                 {/* Close Button */}
                 <button
                   onClick={closeDetailsModal}
-                  className="sticky top-4 right-4 float-right z-10 p-2 bg-red-500 text-white rounded-full hover:bg-red-600 transition"
+                  className="sticky top-4 right-4 float-right z-10 p-2 bg-[#8C5A3C] text-white rounded-full hover:bg-[#74482F] transition"
                 >
                   <FiX size={24} />
                 </button>
@@ -842,7 +842,7 @@ const Menu = () => {
                         </div>
                       )}
                       {selectedItemDetails.customizable && (
-                        <div className="absolute top-4 right-4 bg-blue-500 text-white px-4 py-2 rounded-full font-semibold">
+                        <div className="absolute top-4 right-4 bg-[#8C5A3C] text-white px-4 py-2 rounded-full font-semibold">
                           ✨ Customizable
                         </div>
                       )}
@@ -937,7 +937,7 @@ const Menu = () => {
                           quickAddItem(selectedItemDetails);
                           closeDetailsModal();
                         }}
-                        className="w-full px-6 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-bold text-lg transition flex items-center justify-center gap-2"
+                        className="w-full px-6 py-4 bg-[#8C5A3C] text-white rounded-lg hover:bg-[#74482F] font-bold text-lg transition flex items-center justify-center gap-2"
                       >
                         <Icon name="Zap" size={20} />
                         Quick Add
@@ -947,7 +947,7 @@ const Menu = () => {
                         onClick={() => {
                           window.location.href = '/3d-custom-cake-designer';
                         }}
-                        className="w-full px-6 py-4 bg-purple-600 text-white rounded-lg hover:bg-purple-700 font-bold text-lg transition flex items-center justify-center gap-2"
+                        className="w-full px-6 py-4 bg-[#A66A49] text-white rounded-lg hover:bg-[#8C5A3C] font-bold text-lg transition flex items-center justify-center gap-2"
                       >
                         <Icon name="Palette" size={20} />
                         Customize This Design

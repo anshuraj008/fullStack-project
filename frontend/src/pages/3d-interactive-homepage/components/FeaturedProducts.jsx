@@ -216,7 +216,7 @@ const FeaturedProducts = () => {
           {filteredProducts?.map((product, index) => (
             <motion.div
               key={product?.id}
-              className="bg-card rounded-xl shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden group"
+              className="bg-card rounded-[1.5rem] shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden group border border-border/60 backdrop-blur-sm"
               variants={itemVariants}
               custom={index}
               whileHover={{ 
@@ -257,7 +257,7 @@ const FeaturedProducts = () => {
                   )}
                   {product?.discount && (
                     <motion.span 
-                      className="bg-error text-error-foreground px-2 py-1 rounded-full text-xs font-medium"
+                      className="bg-error text-error-foreground px-2 py-1 rounded-full text-xs font-medium shadow-sm"
                       initial={{ scale: 0, rotate: 90 }}
                       animate={{ scale: 1, rotate: 0 }}
                       transition={{ 
@@ -284,7 +284,7 @@ const FeaturedProducts = () => {
                       variant="ghost"
                       size="icon"
                       iconName="Eye"
-                      className="bg-background/80 backdrop-blur-sm shadow-medium hover:bg-accent w-8 h-8"
+                      className="bg-background/80 backdrop-blur-sm shadow-medium hover:bg-accent w-8 h-8 border border-border/50"
                     />
                   </motion.div>
                   <motion.div whileHover={{ scale: 1.1, rotate: -5 }} whileTap={{ scale: 0.9 }}>
@@ -292,7 +292,7 @@ const FeaturedProducts = () => {
                       variant="ghost"
                       size="icon"
                       iconName="Heart"
-                      className="bg-background/80 backdrop-blur-sm shadow-medium hover:bg-accent w-8 h-8"
+                      className="bg-background/80 backdrop-blur-sm shadow-medium hover:bg-accent w-8 h-8 border border-border/50"
                     />
                   </motion.div>
                 </motion.div>
@@ -315,7 +315,7 @@ const FeaturedProducts = () => {
                       fullWidth
                       onClick={() => handleAddToCart(product?.id)}
                       disabled={addedToCart?.has(product?.id)}
-                      className="bg-background/90 backdrop-blur-sm text-foreground hover:bg-primary hover:text-primary-foreground"
+                      className="bg-background/90 backdrop-blur-sm text-foreground hover:bg-primary hover:text-primary-foreground border border-border/60"
                     >
                       {addedToCart?.has(product?.id) ? 'Added!' : 'Quick Add'}
                     </Button>

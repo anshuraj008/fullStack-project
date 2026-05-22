@@ -43,7 +43,7 @@ const Footer = ({ sectionVariants }) => {
                                     href={social.href}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-10 h-10 bg-white shadow-md rounded-full flex items-center justify-center text-[#2F6D66] hover:text-white hover:bg-[#8C5A3C] transition"
+                                    className="w-10 h-10 bg-white shadow-md rounded-full flex items-center justify-center text-[#8C5A3C] hover:text-white hover:bg-[#8C5A3C] transition"
                                     whileHover={{ scale: 1.1, y: -2 }}
                                     whileTap={{ scale: 0.95 }}
                                     initial={{ opacity: 0, y: 20 }}

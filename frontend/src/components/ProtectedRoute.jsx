@@ -12,7 +12,7 @@ const ProtectedRoute = ({ requiredRole = null }) => {
   // Show loading state while checking authentication
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#FCFAF7] via-white to-[#F1F6F3]">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#FCFAF7] via-white to-[#F6EFE6]">
         <div className="text-center">
           <div className="animate-spin rounded-full h-16 w-16 border-4 border-primary border-t-secondary mx-auto mb-4"></div>
           <p className="text-gray-600 font-medium">Loading...</p>

@@ -14,7 +14,7 @@
     --color-foreground: #2B231D;
     --color-border: #E9DED2;
     --color-input: #FCFAF7;
-    --color-ring: #2F6D66;
+    --color-ring: #8C5A3C;
     --color-card: #FFF8F1;
     --color-card-foreground: #2B231D;
     --color-popover: #FCFAF7;
@@ -25,19 +25,19 @@
     /* Brand Colors */
     --color-primary: #8C5A3C;
     --color-primary-foreground: #FFF8F1;
-    --color-secondary: #2F6D66;
+    --color-secondary: #A66A49;
     --color-secondary-foreground: #FFFFFF;
     --color-accent: #F2E2C4;
     --color-accent-foreground: #2B231D;
 
     /* Status Colors */
-    --color-success: #4F8A6B;
+    --color-success: #A87457;
     --color-success-foreground: #FFFFFF;
-    --color-warning: #D4A83D;
+    --color-warning: #B77A52;
     --color-warning-foreground: #2B231D;
-    --color-error: #C97B63;
+    --color-error: #9E6B57;
     --color-error-foreground: #FFFFFF;
-    --color-destructive: #C97B63;
+    --color-destructive: #9E6B57;
     --color-destructive-foreground: #FFFFFF;
 
     /* Text Colors */
@@ -47,7 +47,7 @@
 
     /* Shadow Variables */
     --shadow-soft: 0 2px 4px rgba(141, 92, 60, 0.10);
-    --shadow-medium: 0 4px 10px rgba(47, 109, 102, 0.10);
+    --shadow-medium: 0 4px 10px rgba(140, 90, 60, 0.12);
     --shadow-large: 0 10px 24px rgba(141, 92, 60, 0.12);
     --shadow-xl: 0 18px 40px rgba(43, 35, 29, 0.14);
 

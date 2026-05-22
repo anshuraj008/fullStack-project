@@ -126,7 +126,7 @@ const CategoryGrid = () => {
           {categories?.map((category, index) => (
             <motion.div
               key={category?.id}
-              className="group relative bg-card rounded-xl shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden"
+              className="group relative bg-card rounded-[1.5rem] shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden border border-border/60"
               variants={itemVariants}
               whileHover={{ 
                 y: -8,
@@ -141,6 +141,8 @@ const CategoryGrid = () => {
                 whileHover={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.3 }}
               />
+
+              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-secondary to-warning opacity-80" />
               
               {/* Image Container with Enhanced Animations */}
               <div className="relative overflow-hidden">
@@ -164,7 +166,7 @@ const CategoryGrid = () => {
                 
                 {/* Animated Icon Badge */}
                 <motion.div 
-                  className="absolute top-4 left-4 w-12 h-12 bg-background/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-medium"
+                  className="absolute top-4 left-4 w-12 h-12 bg-background/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-medium border border-white/50"
                   whileHover={{ 
                     scale: 1.1,
                     rotate: 5,
@@ -205,7 +207,7 @@ const CategoryGrid = () => {
                 >
                   <motion.h3 
                     className="text-xl font-heading font-bold text-foreground mb-2"
-                    whileHover={{ color: "rgb(59 130 246)" }}
+                    whileHover={{ color: "rgb(140 90 60)" }}
                     transition={{ duration: 0.2 }}
                   >
                     {category?.name}
@@ -226,7 +228,7 @@ const CategoryGrid = () => {
                     {category?.features?.map((feature, featureIndex) => (
                       <motion.span
                         key={featureIndex}
-                        className="text-xs bg-muted text-muted-foreground px-2 py-1 rounded-full"
+                        className="text-xs bg-muted text-muted-foreground px-2 py-1 rounded-full border border-border/60"
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
                         transition={{ 
@@ -234,7 +236,7 @@ const CategoryGrid = () => {
                           type: "spring",
                           stiffness: 200
                         }}
-                        whileHover={{ scale: 1.05, backgroundColor: "rgb(59 130 246 / 0.1)" }}
+                        whileHover={{ scale: 1.05, backgroundColor: "rgb(140 90 60 / 0.10)" }}
                       >
                         {feature}
                       </motion.span>
@@ -304,12 +306,12 @@ const CategoryGrid = () => {
           viewport={{ once: true }}
           variants={containerVariants}
         >
-          <motion.div 
-            className="bg-gradient-to-r from-primary/10 via-accent/20 to-secondary/10 rounded-2xl p-8 md:p-12"
+                <motion.div
+                  className="bg-gradient-to-r from-primary/10 via-accent/20 to-secondary/10 rounded-[1.75rem] p-8 md:p-12 border border-border/50 shadow-inner"
             variants={itemVariants}
             whileHover={{ 
               scale: 1.02,
-              background: "linear-gradient(to right, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.25), rgba(59, 130, 246, 0.15))"
+                    background: "linear-gradient(to right, rgba(140, 90, 60, 0.16), rgba(47, 109, 102, 0.18), rgba(212, 168, 61, 0.16))"
             }}
             transition={{ type: "spring", stiffness: 200, damping: 20 }}
           >
@@ -320,12 +322,12 @@ const CategoryGrid = () => {
                 transition={{ type: "spring", stiffness: 300, damping: 15 }}
               >
                 <motion.div 
-                  className="w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-large"
+                  className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center shadow-large"
                   animate={{ 
                     boxShadow: [
-                      "0 10px 25px rgba(59, 130, 246, 0.2)",
-                      "0 10px 25px rgba(59, 130, 246, 0.4)",
-                      "0 10px 25px rgba(59, 130, 246, 0.2)"
+                      "0 10px 25px rgba(140, 90, 60, 0.18)",
+                      "0 10px 25px rgba(47, 109, 102, 0.32)",
+                      "0 10px 25px rgba(140, 90, 60, 0.18)"
                     ]
                   }}
                   transition={{ duration: 2, repeat: Infinity }}

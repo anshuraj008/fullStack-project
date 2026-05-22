@@ -72,7 +72,7 @@ const LoginPage = () => {
         <meta name="description" content="Sign in to your Cuppie Cake account to access your orders, saved designs, and more." />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-[#FCFAF7] via-[#FFF8F1] to-[#F1F6F3] flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gradient-to-br from-[#FCFAF7] via-[#FFF8F1] to-[#F6EFE6] flex items-center justify-center p-4">
         {/* Back to Home Button */}
         <Link
           to="/3d-interactive-homepage"
@@ -124,12 +124,12 @@ const LoginPage = () => {
                     onClick={() => setFormData(prev => ({ ...prev, accountType: 'admin' }))}
                     className={`p-4 border-2 rounded-lg transition-all ${
                       formData.accountType === 'admin'
-                        ? 'border-blue-500 bg-blue-50'
-                        : 'border-gray-200 hover:border-blue-300'
+                        ? 'border-[#8C5A3C] bg-[#EAD8C8]/40'
+                        : 'border-gray-200 hover:border-[#8C5A3C]'
                     }`}
                   >
                     <FaUserShield className={`text-2xl mx-auto mb-2 ${
-                      formData.accountType === 'admin' ? 'text-blue-500' : 'text-gray-400'
+                      formData.accountType === 'admin' ? 'text-[#8C5A3C]' : 'text-gray-400'
                     }`} />
                     <div className="text-sm font-medium text-gray-700">Admin</div>
                   </button>
@@ -147,7 +147,7 @@ const LoginPage = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   placeholder="your@email.com"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2F6D66] focus:border-[#2F6D66] transition-all"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8C5A3C] focus:border-[#8C5A3C] transition-all"
                   required
                 />
               </div>
@@ -163,7 +163,7 @@ const LoginPage = () => {
                   value={formData.password}
                   onChange={handleInputChange}
                   placeholder="Enter your password"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2F6D66] focus:border-[#2F6D66] transition-all"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8C5A3C] focus:border-[#8C5A3C] transition-all"
                   required
                 />
               </div>

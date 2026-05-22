@@ -196,7 +196,7 @@ const TrendingCarousel = () => {
           >
             <motion.button
               onClick={prevSlide}
-              className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm shadow-large hover:bg-accent w-12 h-12 rounded-full flex items-center justify-center transition-colors"
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm shadow-large hover:bg-accent w-12 h-12 rounded-full flex items-center justify-center transition-colors border border-border/60"
               whileHover={{ scale: 1.1, x: -5 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -211,7 +211,7 @@ const TrendingCarousel = () => {
           >
             <motion.button
               onClick={nextSlide}
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm shadow-large hover:bg-accent w-12 h-12 rounded-full flex items-center justify-center transition-colors"
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm shadow-large hover:bg-accent w-12 h-12 rounded-full flex items-center justify-center transition-colors border border-border/60"
               whileHover={{ scale: 1.1, x: 5 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -232,7 +232,7 @@ const TrendingCarousel = () => {
                     exit="exit"
                     variants={cardVariants}
                     whileHover="hover"
-                    className="bg-card rounded-lg shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden group"
+                    className="bg-card rounded-[1.5rem] shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden group border border-border/60"
                   >
                     {/* Enhanced Image Container */}
                     <div className="relative overflow-hidden">
@@ -250,7 +250,7 @@ const TrendingCarousel = () => {
                       {/* Animated Badge */}
                       {getBadgeInfo(cake) && (
                         <motion.div 
-                          className={`absolute top-3 left-3 px-2 py-1 rounded-full text-xs font-medium ${getBadgeInfo(cake)?.className}`}
+                          className={`absolute top-3 left-3 px-2 py-1 rounded-full text-xs font-medium shadow-sm ${getBadgeInfo(cake)?.className}`}
                           initial={{ scale: 0, rotate: -180 }}
                           animate={{ scale: 1, rotate: 0 }}
                           transition={{ 
@@ -277,7 +277,7 @@ const TrendingCarousel = () => {
                             variant="ghost"
                             size="icon"
                             iconName="Eye"
-                            className="bg-background/80 backdrop-blur-sm shadow-medium hover:bg-accent w-8 h-8"
+                            className="bg-background/80 backdrop-blur-sm shadow-medium hover:bg-accent w-8 h-8 border border-border/50"
                           />
                         </motion.div>
                         <motion.div whileHover={{ scale: 1.1, rotate: -5 }} whileTap={{ scale: 0.9 }}>
@@ -285,7 +285,7 @@ const TrendingCarousel = () => {
                             variant="ghost"
                             size="icon"
                             iconName="Heart"
-                            className="bg-background/80 backdrop-blur-sm shadow-medium hover:bg-accent w-8 h-8"
+                            className="bg-background/80 backdrop-blur-sm shadow-medium hover:bg-accent w-8 h-8 border border-border/50"
                           />
                         </motion.div>
                       </motion.div>
@@ -445,7 +445,7 @@ const TrendingCarousel = () => {
           >
             <motion.button
               onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-              className="w-10 h-10 bg-background/80 backdrop-blur-sm rounded-full flex items-center justify-center shadow-medium hover:bg-background transition-colors"
+              className="w-10 h-10 bg-background/80 backdrop-blur-sm rounded-full flex items-center justify-center shadow-medium hover:bg-background transition-colors border border-border/60"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
