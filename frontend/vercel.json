@@ -3,7 +3,7 @@
   "buildCommand": "npm run build",
   "outputDirectory": "build",
   "devCommand": "npm run dev",
-  "installCommand": "npm install",
+  "installCommand": "npm install --include=dev",
   "framework": "vite",
   "routes": [
     {
