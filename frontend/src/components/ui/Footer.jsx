@@ -17,7 +17,7 @@ const Footer = ({ sectionVariants }) => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={sectionVariants}
-            className="bg-rose-50 text-gray-700 py-14"
+            className="bg-[#F6EFE6] text-gray-700 py-14"
         >
             <div className="container mx-auto px-6 md:px-12">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
@@ -43,7 +43,7 @@ const Footer = ({ sectionVariants }) => {
                                     href={social.href}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-10 h-10 bg-white shadow-md rounded-full flex items-center justify-center text-rose-400 hover:text-white hover:bg-rose-400 transition"
+                                    className="w-10 h-10 bg-white shadow-md rounded-full flex items-center justify-center text-[#2F6D66] hover:text-white hover:bg-[#8C5A3C] transition"
                                     whileHover={{ scale: 1.1, y: -2 }}
                                     whileTap={{ scale: 0.95 }}
                                     initial={{ opacity: 0, y: 20 }}
@@ -79,7 +79,7 @@ const Footer = ({ sectionVariants }) => {
                                 >
                                     <motion.a
                                         href={link.href}
-                                        className="text-gray-600 hover:text-rose-400 transition"
+                                        className="text-gray-600 hover:text-[#8C5A3C] transition"
                                         whileHover={{ x: 5 }}
                                     >
                                         {link.text}
@@ -108,7 +108,7 @@ const Footer = ({ sectionVariants }) => {
                                     >
                                         <motion.a
                                             href="/cake-category-browse"
-                                            className="text-gray-600 hover:text-rose-400 transition"
+                                            className="text-gray-600 hover:text-[#8C5A3C] transition"
                                             whileHover={{ x: 5 }}
                                         >
                                             {category}

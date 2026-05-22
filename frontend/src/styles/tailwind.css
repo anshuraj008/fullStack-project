@@ -10,46 +10,46 @@
 @layer base {
   :root {
     /* Core Colors */
-    --color-background: #FEFEFE; /* near-white */
-    --color-foreground: #2D2D2D; /* charcoal */
-    --color-border: #F0E6ED; /* light pink-gray */
-    --color-input: #FEFEFE; /* near-white */
-    --color-ring: #F8BBD9; /* baby-pink */
-    --color-card: #F9F7F8; /* warm-neutral */
-    --color-card-foreground: #2D2D2D; /* charcoal */
-    --color-popover: #FEFEFE; /* near-white */
-    --color-popover-foreground: #2D2D2D; /* charcoal */
-    --color-muted: #F9F7F8; /* warm-neutral */
-    --color-muted-foreground: #6B6B6B; /* medium-gray */
+    --color-background: #FCFAF7;
+    --color-foreground: #2B231D;
+    --color-border: #E9DED2;
+    --color-input: #FCFAF7;
+    --color-ring: #2F6D66;
+    --color-card: #FFF8F1;
+    --color-card-foreground: #2B231D;
+    --color-popover: #FCFAF7;
+    --color-popover-foreground: #2B231D;
+    --color-muted: #F6EFE6;
+    --color-muted-foreground: #6E6258;
 
     /* Brand Colors */
-    --color-primary: #F8BBD9; /* baby-pink */
-    --color-primary-foreground: #2D2D2D; /* charcoal */
-    --color-secondary: #E8A5C8; /* deeper-pink */
-    --color-secondary-foreground: #2D2D2D; /* charcoal */
-    --color-accent: #FFE4E1; /* misty-rose */
-    --color-accent-foreground: #2D2D2D; /* charcoal */
+    --color-primary: #8C5A3C;
+    --color-primary-foreground: #FFF8F1;
+    --color-secondary: #2F6D66;
+    --color-secondary-foreground: #FFFFFF;
+    --color-accent: #F2E2C4;
+    --color-accent-foreground: #2B231D;
 
     /* Status Colors */
-    --color-success: #A8D5A8; /* soft-sage-green */
-    --color-success-foreground: #2D2D2D; /* charcoal */
-    --color-warning: #F5C842; /* warm-golden-yellow */
-    --color-warning-foreground: #2D2D2D; /* charcoal */
-    --color-error: #E8A5A5; /* muted-coral */
-    --color-error-foreground: #2D2D2D; /* charcoal */
-    --color-destructive: #E8A5A5; /* muted-coral */
-    --color-destructive-foreground: #2D2D2D; /* charcoal */
+    --color-success: #4F8A6B;
+    --color-success-foreground: #FFFFFF;
+    --color-warning: #D4A83D;
+    --color-warning-foreground: #2B231D;
+    --color-error: #C97B63;
+    --color-error-foreground: #FFFFFF;
+    --color-destructive: #C97B63;
+    --color-destructive-foreground: #FFFFFF;
 
     /* Text Colors */
-    --color-text-primary: #2D2D2D; /* charcoal */
-    --color-text-secondary: #6B6B6B; /* medium-gray */
-    --color-surface: #F9F7F8; /* warm-neutral */
+    --color-text-primary: #2B231D;
+    --color-text-secondary: #6E6258;
+    --color-surface: #FFF8F1;
 
     /* Shadow Variables */
-    --shadow-soft: 0 2px 4px rgba(248, 187, 217, 0.15);
-    --shadow-medium: 0 4px 8px rgba(248, 187, 217, 0.15);
-    --shadow-large: 0 8px 16px rgba(248, 187, 217, 0.15);
-    --shadow-xl: 0 16px 32px rgba(248, 187, 217, 0.15);
+    --shadow-soft: 0 2px 4px rgba(141, 92, 60, 0.10);
+    --shadow-medium: 0 4px 10px rgba(47, 109, 102, 0.10);
+    --shadow-large: 0 10px 24px rgba(141, 92, 60, 0.12);
+    --shadow-xl: 0 18px 40px rgba(43, 35, 29, 0.14);
 
     /* Border Radius */
     --radius: 4px;

@@ -291,7 +291,7 @@ const Menu = () => {
         <Header />
 
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-rose-50 to-pink-100 py-16 mt-16">
+        <section className="relative bg-gradient-to-br from-[#FCFAF7] to-[#F1F6F3] py-16 mt-16">
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -316,19 +316,19 @@ const Menu = () => {
               <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="mb-12 bg-gradient-to-r from-rose-50 to-pink-100 rounded-xl border-2 border-rose-200 p-8 shadow-medium"
+                className="mb-12 bg-gradient-to-r from-[#FFF8F1] to-[#F6EFE6] rounded-xl border-2 border-[#E9DED2] p-8 shadow-medium"
               >
                 <div className="flex items-center justify-between mb-6">
                   <div>
-                    <h2 className="text-2xl font-bold text-rose-900 flex items-center gap-2">
-                      <Icon name="ShoppingCart" size={24} className="text-rose-600" />
+                    <h2 className="text-2xl font-bold text-[#2B231D] flex items-center gap-2">
+                      <Icon name="ShoppingCart" size={24} className="text-[#8C5A3C]" />
                       Shopping Cart
                     </h2>
-                    <p className="text-rose-700 mt-1">{cart.length} item(s) in cart</p>
+                    <p className="text-[#6E6258] mt-1">{cart.length} item(s) in cart</p>
                   </div>
                   <button
                     onClick={() => setShowCart(!showCart)}
-                    className="text-rose-600 hover:text-rose-900 text-2xl"
+                    className="text-[#8C5A3C] hover:text-[#2F6D66] text-2xl"
                   >
                     <FiChevronDown
                       size={24}
@@ -352,7 +352,7 @@ const Menu = () => {
                             initial={{ opacity: 0, scale: 0.9 }}
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.9 }}
-                            className="bg-white rounded-lg p-4 border border-rose-200 shadow-soft"
+                            className="bg-white rounded-lg p-4 border border-[#E9DED2] shadow-soft"
                           >
                             {/* Item Image */}
                             <div className="mb-4 relative">
@@ -380,7 +380,7 @@ const Menu = () => {
                             {/* Item Details */}
                             <div className="mb-3">
                               <h3 className="font-semibold text-gray-900 text-sm mb-2">{item.name}</h3>
-                              <p className="text-lg font-bold text-rose-600">{formatPrice(item.price)}</p>
+                              <p className="text-lg font-bold text-[#8C5A3C]">{formatPrice(item.price)}</p>
                             </div>
 
                             {/* Size Selection */}
@@ -389,7 +389,7 @@ const Menu = () => {
                               <select
                                 value={item.selectedSize}
                                 onChange={(e) => updateCartSize(index, e.target.value)}
-                                className="w-full px-2 py-1 border border-gray-300 rounded text-sm focus:outline-none focus:ring-2 focus:ring-rose-500"
+                                className="w-full px-2 py-1 border border-gray-300 rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#2F6D66]"
                               >
                                 {item.sizes.map((size) => (
                                   <option key={size} value={size}>
@@ -405,7 +405,7 @@ const Menu = () => {
                               <select
                                 value={item.selectedFlavor}
                                 onChange={(e) => updateCartFlavor(index, e.target.value)}
-                                className="w-full px-2 py-1 border border-gray-300 rounded text-sm focus:outline-none focus:ring-2 focus:ring-rose-500"
+                                className="w-full px-2 py-1 border border-gray-300 rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#2F6D66]"
                               >
                                 {item.flavors.map((flavor) => (
                                   <option key={flavor} value={flavor}>
@@ -437,7 +437,7 @@ const Menu = () => {
                             {/* Item Total */}
                             <div className="mt-3 pt-3 border-t border-gray-200 text-right">
                               <p className="text-xs text-gray-600">Item Total</p>
-                              <p className="text-lg font-bold text-rose-600">
+                              <p className="text-lg font-bold text-[#8C5A3C]">
                                 {formatPrice(item.price * item.quantity)}
                               </p>
                             </div>
@@ -446,7 +446,7 @@ const Menu = () => {
                       </div>
 
                       {/* Cart Summary and Actions */}
-                      <div className="bg-white rounded-lg p-6 border border-rose-200">
+                      <div className="bg-white rounded-lg p-6 border border-[#E9DED2]">
                         <div className="space-y-4 mb-6">
                           <div className="flex items-center justify-between text-gray-700">
                             <span>Subtotal:</span>
@@ -463,7 +463,7 @@ const Menu = () => {
                         <div className="pt-4 border-t border-gray-200 mb-6">
                           <div className="flex items-center justify-between">
                             <span className="text-lg font-bold text-gray-900">Order Total:</span>
-                            <span className="text-3xl font-bold text-rose-600">
+                            <span className="text-3xl font-bold text-[#8C5A3C]">
                               {formatPrice(cart.reduce((sum, item) => sum + (item.price * item.quantity), 0))}
                             </span>
                           </div>
@@ -478,7 +478,7 @@ const Menu = () => {
                           </button>
                           <button
                             onClick={() => window.location.href = '/shopping-cart-checkout'}
-                            className="flex-1 px-4 py-3 bg-rose-600 text-white rounded-lg hover:bg-rose-700 font-semibold transition flex items-center justify-center gap-2"
+                            className="flex-1 px-4 py-3 bg-[#8C5A3C] text-white rounded-lg hover:bg-[#74482F] font-semibold transition flex items-center justify-center gap-2"
                           >
                             <Icon name="ArrowRight" size={18} />
                             Proceed to Checkout
@@ -494,19 +494,19 @@ const Menu = () => {
               <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="mb-12 bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl border-2 border-blue-200 p-8 shadow-medium"
+                className="mb-12 bg-gradient-to-r from-[#F1F6F3] to-[#EAF2EF] rounded-xl border-2 border-[#D8E5E1] p-8 shadow-medium"
               >
                 <div className="flex items-center justify-between mb-6">
                   <div>
-                    <h2 className="text-2xl font-bold text-blue-900 flex items-center gap-2">
-                      <Icon name="Zap" size={24} className="text-blue-600" />
+                    <h2 className="text-2xl font-bold text-[#2B231D] flex items-center gap-2">
+                      <Icon name="Zap" size={24} className="text-[#2F6D66]" />
                       Quick Add Section
                     </h2>
-                    <p className="text-blue-700 mt-1">{quickAddItems.length} item(s) ready to add</p>
+                    <p className="text-[#6E6258] mt-1">{quickAddItems.length} item(s) ready to add</p>
                   </div>
                   <button
                     onClick={() => setShowQuickAdd(!showQuickAdd)}
-                    className="text-blue-600 hover:text-blue-900 text-2xl"
+                    className="text-[#2F6D66] hover:text-[#8C5A3C] text-2xl"
                   >
                     {showQuickAdd ? '−' : '+'}
                   </button>
@@ -526,7 +526,7 @@ const Menu = () => {
                           initial={{ opacity: 0, scale: 0.9 }}
                           animate={{ opacity: 1, scale: 1 }}
                           exit={{ opacity: 0, scale: 0.9 }}
-                          className="bg-white rounded-lg p-4 border border-blue-200 shadow-soft"
+                          className="bg-white rounded-lg p-4 border border-[#D8E5E1] shadow-soft"
                         >
                           <div className="flex items-start justify-between mb-3">
                             <div>
@@ -547,7 +547,7 @@ const Menu = () => {
                           </div>
 
                           <div className="flex items-center justify-between">
-                            <div className="text-lg font-bold text-blue-600">
+                            <div className="text-lg font-bold text-[#2F6D66]">
                               {formatPrice(item.price)}
                             </div>
                             <div className="flex items-center gap-2 bg-gray-100 rounded-lg">
@@ -573,16 +573,16 @@ const Menu = () => {
                     </div>
 
                     {/* Summary and Actions */}
-                    <div className="bg-white rounded-lg p-4 border border-blue-200">
+                    <div className="bg-white rounded-lg p-4 border border-[#D8E5E1]">
                       <div className="flex items-center justify-between mb-4">
                         <span className="text-gray-700 font-semibold">Total Items:</span>
-                        <span className="text-2xl font-bold text-blue-600">
+                        <span className="text-2xl font-bold text-[#2F6D66]">
                           {quickAddItems.reduce((sum, item) => sum + item.quantity, 0)}
                         </span>
                       </div>
                       <div className="flex items-center justify-between mb-4 pb-4 border-b border-gray-200">
                         <span className="text-gray-700 font-semibold">Subtotal:</span>
-                        <span className="text-2xl font-bold text-blue-600">
+                        <span className="text-2xl font-bold text-[#2F6D66]">
                           {formatPrice(quickAddItems.reduce((sum, item) => sum + (item.price * item.quantity), 0))}
                         </span>
                       </div>
@@ -629,8 +629,8 @@ const Menu = () => {
                   iconName={category.icon}
                   onClick={() => setActiveCategory(category.id)}
                   className={`px-6 py-3 ${activeCategory === category.id
-                    ? 'bg-rose-500 hover:bg-rose-600 text-white'
-                    : 'border-rose-200 text-rose-600 hover:bg-rose-50'
+                    ? 'bg-[#8C5A3C] hover:bg-[#74482F] text-white'
+                    : 'border-[#E9DED2] text-[#8C5A3C] hover:bg-[#F6EFE6]'
                   }`}
                 >
                   {category.name}
@@ -657,7 +657,7 @@ const Menu = () => {
                         className="w-full h-64 md:h-full object-cover"
                       />
                       {item.popular && (
-                        <div className="absolute top-4 left-4 bg-rose-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                        <div className="absolute top-4 left-4 bg-[#8C5A3C] text-white px-3 py-1 rounded-full text-sm font-medium">
                           Popular
                         </div>
                       )}
@@ -685,7 +685,7 @@ const Menu = () => {
                             </div>
                           </div>
                           <div className="text-right">
-                            <div className="text-3xl font-bold text-rose-600">
+                            <div className="text-3xl font-bold text-[#8C5A3C]">
                               {formatPrice(item.price)}
                             </div>
                             <div className="text-sm text-gray-500">starting at</div>
@@ -711,7 +711,7 @@ const Menu = () => {
                             <h4 className="font-semibold text-gray-900 mb-2">Flavor Options</h4>
                             <div className="flex flex-wrap gap-2">
                               {item.flavors.map((flavor) => (
-                                <span key={flavor} className="bg-rose-50 text-rose-700 px-3 py-1 rounded-full text-sm">
+                                <span key={flavor} className="bg-[#F2E2C4] text-[#2B231D] px-3 py-1 rounded-full text-sm">
                                   {flavor}
                                 </span>
                               ))}
@@ -730,7 +730,7 @@ const Menu = () => {
                             size="lg"
                             iconName="Eye"
                             onClick={() => viewItemDetails(item)}
-                            className="border-purple-500 text-purple-600 hover:bg-purple-50"
+                            className="border-[#2F6D66] text-[#2F6D66] hover:bg-[#F1F6F3]"
                           >
                             View Details
                           </Button>
@@ -748,7 +748,7 @@ const Menu = () => {
                             size="lg"
                             iconName="ShoppingCart"
                             onClick={() => addToCart(item)}
-                            className="bg-rose-500 hover:bg-rose-600"
+                            className="bg-[#8C5A3C] hover:bg-[#74482F]"
                           >
                             Add to Cart
                           </Button>
@@ -772,19 +772,19 @@ const Menu = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="bg-gradient-to-r from-rose-500 to-pink-600 py-16">
+        <section className="bg-gradient-to-r from-[#8C5A3C] to-[#2F6D66] py-16">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Don't see what you're looking for?
             </h2>
-            <p className="text-xl text-rose-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-[#F6EFE6] mb-8 max-w-2xl mx-auto">
               Our expert bakers can create any custom design you can imagine. Let's discuss your vision!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 variant="outline"
                 size="lg"
-                className="border-white text-white hover:bg-white hover:text-rose-600"
+                className="border-white text-white hover:bg-white hover:text-[#8C5A3C]"
                 asChild
               >
                 <a href="/3d-custom-cake-designer">Design Your Own</a>
@@ -792,7 +792,7 @@ const Menu = () => {
               <Button
                 variant="default"
                 size="lg"
-                className="bg-white text-rose-600 hover:bg-gray-100"
+                className="bg-white text-[#8C5A3C] hover:bg-gray-100"
                 asChild
               >
                 <a href="/contact">Contact Us</a>
@@ -837,7 +837,7 @@ const Menu = () => {
                         className="w-full h-96 object-cover rounded-xl"
                       />
                       {selectedItemDetails.popular && (
-                        <div className="absolute top-4 left-4 bg-rose-500 text-white px-4 py-2 rounded-full font-semibold">
+                        <div className="absolute top-4 left-4 bg-[#8C5A3C] text-white px-4 py-2 rounded-full font-semibold">
                           ⭐ Popular
                         </div>
                       )}
@@ -858,7 +858,7 @@ const Menu = () => {
                       </h1>
                       
                       <div className="mb-6">
-                        <p className="text-3xl font-bold text-rose-600">
+                        <p className="text-3xl font-bold text-[#8C5A3C]">
                           {formatPrice(selectedItemDetails.price)}
                         </p>
                         <p className="text-gray-600 text-sm mt-1">Starting price</p>
@@ -875,7 +875,7 @@ const Menu = () => {
                           {selectedItemDetails.sizes.map((size) => (
                             <div
                               key={size}
-                              className="px-4 py-2 border-2 border-gray-300 rounded-lg font-semibold text-gray-700 hover:border-rose-500 hover:text-rose-600 transition cursor-default"
+                              className="px-4 py-2 border-2 border-gray-300 rounded-lg font-semibold text-gray-700 hover:border-[#8C5A3C] hover:text-[#8C5A3C] transition cursor-default"
                             >
                               {size}
                             </div>
@@ -890,7 +890,7 @@ const Menu = () => {
                           {selectedItemDetails.flavors.map((flavor) => (
                             <div
                               key={flavor}
-                              className="px-4 py-2 border-2 border-rose-300 bg-rose-50 text-rose-700 rounded-lg font-semibold hover:bg-rose-100 transition cursor-default"
+                              className="px-4 py-2 border-2 border-[#F2E2C4] bg-[#FFF8F1] text-[#2B231D] rounded-lg font-semibold hover:bg-[#F2E2C4] transition cursor-default"
                             >
                               {flavor}
                             </div>
@@ -926,7 +926,7 @@ const Menu = () => {
                           closeDetailsModal();
                           showNotification(`${selectedItemDetails.name} added to cart!`);
                         }}
-                        className="w-full px-6 py-4 bg-rose-600 text-white rounded-lg hover:bg-rose-700 font-bold text-lg transition flex items-center justify-center gap-2"
+                        className="w-full px-6 py-4 bg-[#8C5A3C] text-white rounded-lg hover:bg-[#74482F] font-bold text-lg transition flex items-center justify-center gap-2"
                       >
                         <Icon name="ShoppingCart" size={20} />
                         Add to Cart - {formatPrice(selectedItemDetails.price)}

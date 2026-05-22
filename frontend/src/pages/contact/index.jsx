@@ -37,8 +37,8 @@ const Contact = () => {
       <main className="pt-16">
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="mb-8 flex items-center gap-3">
-            <div className="w-12 h-12 rounded-lg bg-accent flex items-center justify-center">
-              <Icon name="Phone" size={22} className="text-primary" />
+            <div className="w-12 h-12 rounded-lg bg-[#F2E2C4] flex items-center justify-center">
+              <Icon name="Phone" size={22} className="text-[#2F6D66]" />
             </div>
             <div>
               <h1 className="text-3xl font-heading font-bold">Contact Us</h1>
@@ -74,7 +74,7 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="lg:col-span-2 p-6 rounded-xl border border-border bg-card shadow-soft">
               {status.message && (
-                <div className={`mb-4 rounded-md px-4 py-3 text-sm ${status.type === 'error' ? 'bg-destructive/10 text-destructive' : 'bg-primary/10 text-primary'}`}>
+                <div className={`mb-4 rounded-md px-4 py-3 text-sm ${status.type === 'error' ? 'bg-destructive/10 text-destructive' : 'bg-secondary/10 text-secondary'}`}>
                   {status.message}
                 </div>
               )}
@@ -87,7 +87,7 @@ const Contact = () => {
                       name="name"
                       value={form.name}
                       onChange={handleChange}
-                      className="w-full rounded-md border border-border bg-background px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+                      className="w-full rounded-md border border-border bg-background px-3 py-2 focus:outline-none focus:ring-2 focus:ring-secondary"
                       placeholder="Your name"
                     />
                   </div>
@@ -98,7 +98,7 @@ const Contact = () => {
                       name="email"
                       value={form.email}
                       onChange={handleChange}
-                      className="w-full rounded-md border border-border bg-background px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+                      className="w-full rounded-md border border-border bg-background px-3 py-2 focus:outline-none focus:ring-2 focus:ring-secondary"
                       placeholder="you@example.com"
                     />
                   </div>
@@ -111,7 +111,7 @@ const Contact = () => {
                     name="subject"
                     value={form.subject}
                     onChange={handleChange}
-                    className="w-full rounded-md border border-border bg-background px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="w-full rounded-md border border-border bg-background px-3 py-2 focus:outline-none focus:ring-2 focus:ring-secondary"
                     placeholder="How can we help?"
                   />
                 </div>
@@ -123,7 +123,7 @@ const Contact = () => {
                     value={form.message}
                     onChange={handleChange}
                     rows={6}
-                    className="w-full rounded-md border border-border bg-background px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+                    className="w-full rounded-md border border-border bg-background px-3 py-2 focus:outline-none focus:ring-2 focus:ring-secondary"
                     placeholder="Write your message here..."
                   />
                 </div>

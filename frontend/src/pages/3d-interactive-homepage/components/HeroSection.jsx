@@ -117,7 +117,7 @@ const HeroSection = () => {
             >
               Freshly Baked Happiness,{" "}
               <motion.span
-                className="block text-rose-400"
+                className="block text-[#F2C14E]"
                 initial={{ x: -50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{
@@ -156,7 +156,7 @@ const HeroSection = () => {
                   size="lg"
                   iconName="ShoppingCart"
                   iconPosition="left"
-                  className="text-lg px-8 py-4 bg-rose-500 hover:bg-rose-600"
+                  className="text-lg px-8 py-4 bg-[#8C5A3C] hover:bg-[#74482F]"
                   asChild
                 >
                   <Link to="/cake-category-browse">Order Now</Link>
@@ -195,7 +195,7 @@ const HeroSection = () => {
 
               {/* Floating icons */}
               <motion.div
-                className="absolute -top-4 -right-4 w-8 h-8 bg-rose-500 rounded-full flex items-center justify-center shadow-medium"
+                className="absolute -top-4 -right-4 w-8 h-8 bg-[#2F6D66] rounded-full flex items-center justify-center shadow-medium"
                 animate={{ y: [-5, 5, -5], rotate: [0, 180, 360] }}
                 transition={{
                   y: { duration: 2, repeat: Infinity, ease: "easeInOut" },
@@ -227,7 +227,7 @@ const HeroSection = () => {
               to="/cake-category-browse"
               className="flex flex-col items-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              <div className="w-12 h-12 bg-rose-500 rounded-full flex items-center justify-center mb-4 group-hover:bg-rose-600 transition-colors">
+                <div className="w-12 h-12 bg-[#2F6D66] rounded-full flex items-center justify-center mb-4 group-hover:bg-[#245852] transition-colors">
                 <Icon name="Search" size={24} className="text-white" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Browse Cakes</h3>
@@ -245,7 +245,7 @@ const HeroSection = () => {
               to="/shopping-cart-checkout"
               className="flex flex-col items-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              <div className="w-12 h-12 bg-rose-500 rounded-full flex items-center justify-center mb-4 group-hover:bg-rose-600 transition-colors">
+                <div className="w-12 h-12 bg-[#8C5A3C] rounded-full flex items-center justify-center mb-4 group-hover:bg-[#74482F] transition-colors">
                 <Icon name="ShoppingCart" size={24} className="text-white" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Shopping Cart</h3>
@@ -263,7 +263,7 @@ const HeroSection = () => {
               to="/3d-custom-cake-designer"
               className="flex flex-col items-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              <div className="w-12 h-12 bg-rose-500 rounded-full flex items-center justify-center mb-4 group-hover:bg-rose-600 transition-colors">
+                <div className="w-12 h-12 bg-[#D4A83D] rounded-full flex items-center justify-center mb-4 group-hover:bg-[#B68E2F] transition-colors">
                 <Icon name="Palette" size={24} className="text-white" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Custom Design</h3>

@@ -72,11 +72,11 @@ const LoginPage = () => {
         <meta name="description" content="Sign in to your Cuppie Cake account to access your orders, saved designs, and more." />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-rose-50 via-white to-pink-50 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gradient-to-br from-[#FCFAF7] via-[#FFF8F1] to-[#F1F6F3] flex items-center justify-center p-4">
         {/* Back to Home Button */}
         <Link
           to="/3d-interactive-homepage"
-          className="absolute top-6 left-6 flex items-center gap-2 text-gray-600 hover:text-rose-500 transition-colors"
+          className="absolute top-6 left-6 flex items-center gap-2 text-gray-600 hover:text-[#8C5A3C] transition-colors"
         >
           <IoMdArrowBack size={20} />
           <span className="font-medium">Back to Home</span>
@@ -86,7 +86,7 @@ const LoginPage = () => {
           {/* Header */}
           <div className="text-center mb-8">
             <Link to="/3d-interactive-homepage" className="inline-block mb-6">
-              <div className="bg-gradient-to-tr from-rose-400 to-rose-600 text-white w-16 h-16 flex items-center justify-center rounded-2xl shadow-lg mx-auto">
+              <div className="bg-gradient-to-tr from-[#8C5A3C] to-[#2F6D66] text-white w-16 h-16 flex items-center justify-center rounded-2xl shadow-lg mx-auto">
                 <IoMdLogIn size={30} />
               </div>
             </Link>
@@ -108,12 +108,12 @@ const LoginPage = () => {
                     onClick={() => setFormData(prev => ({ ...prev, accountType: 'customer' }))}
                     className={`p-4 border-2 rounded-lg transition-all ${
                       formData.accountType === 'customer'
-                        ? 'border-rose-500 bg-rose-50'
-                        : 'border-gray-200 hover:border-rose-300'
+                        ? 'border-[#8C5A3C] bg-[#F2E2C4]/35'
+                        : 'border-gray-200 hover:border-[#2F6D66]'
                     }`}
                   >
                     <FaUser className={`text-2xl mx-auto mb-2 ${
-                      formData.accountType === 'customer' ? 'text-rose-500' : 'text-gray-400'
+                      formData.accountType === 'customer' ? 'text-[#8C5A3C]' : 'text-gray-400'
                     }`} />
                     <div className="text-sm font-medium text-gray-700">Customer</div>
                   </button>
@@ -139,7 +139,7 @@ const LoginPage = () => {
               {/* Email Field */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Email Address <span className="text-rose-500">*</span>
+                  Email Address <span className="text-[#8C5A3C]">*</span>
                 </label>
                 <input
                   type="email"
@@ -147,7 +147,7 @@ const LoginPage = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   placeholder="your@email.com"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-400 focus:border-rose-400 transition-all"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2F6D66] focus:border-[#2F6D66] transition-all"
                   required
                 />
               </div>
@@ -155,7 +155,7 @@ const LoginPage = () => {
               {/* Password Field */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Password <span className="text-rose-500">*</span>
+                  Password <span className="text-[#8C5A3C]">*</span>
                 </label>
                 <input
                   type="password"
@@ -163,7 +163,7 @@ const LoginPage = () => {
                   value={formData.password}
                   onChange={handleInputChange}
                   placeholder="Enter your password"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-400 focus:border-rose-400 transition-all"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2F6D66] focus:border-[#2F6D66] transition-all"
                   required
                 />
               </div>
@@ -176,13 +176,13 @@ const LoginPage = () => {
                     name="rememberMe"
                     checked={formData.rememberMe}
                     onChange={handleInputChange}
-                    className="accent-rose-500"
+                    className="accent-[#8C5A3C]"
                   />
                   <span className="text-gray-600">Remember me</span>
                 </label>
                 <button
                   type="button"
-                  className="text-rose-500 hover:underline font-medium"
+                  className="text-[#8C5A3C] hover:underline font-medium"
                 >
                   Forgot password?
                 </button>
@@ -192,7 +192,7 @@ const LoginPage = () => {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full bg-gradient-to-r from-rose-400 to-rose-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-gradient-to-r from-[#8C5A3C] to-[#2F6D66] text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isLoading ? "Signing In..." : "Sign In"}
               </button>
@@ -224,7 +224,7 @@ const LoginPage = () => {
             <div className="text-center">
               <p className="text-gray-600">
                 Don't have an account?{" "}
-                <Link to="/signup" className="text-rose-500 hover:underline font-medium">
+                <Link to="/signup" className="text-[#8C5A3C] hover:underline font-medium">
                   Create one here
                 </Link>
               </p>
@@ -237,7 +237,7 @@ const LoginPage = () => {
               Secured with enterprise-grade encryption 🔒
             </p>
             <p className="text-xs text-gray-400 mt-2">
-              © 2025 <span className="text-rose-500 font-semibold">Cuppie Cake</span> — All rights reserved.
+              © 2025 <span className="text-[#8C5A3C] font-semibold">Cuppie Cake</span> — All rights reserved.
             </p>
           </div>
         </div>

@@ -57,7 +57,7 @@ const CakeViewer3D = ({ cakeConfig, onModelUpdate, className = "" }) => {
                 {/* Layer decorations */}
                 {decorations?.includes('roses') && index === 0 && (
                   <div className="absolute top-2 left-1/2 transform -translate-x-1/2">
-                    <div className="w-4 h-4 bg-pink-400 rounded-full shadow-sm"></div>
+                    <div className="w-4 h-4 bg-[#C97B63] rounded-full shadow-sm"></div>
                   </div>
                 )}
                 {decorations?.includes('sprinkles') && (

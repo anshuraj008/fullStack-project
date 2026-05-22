@@ -77,7 +77,7 @@ const DeliverySection = ({ onDeliveryChange, deliveryData }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 min-h-screen border border-border rounded-lg overflow-hidden">
       {/* Left Side Image */}
-      <div className="bg-rose-100 flex items-center justify-center p-6">
+      <div className="bg-[#F2E2C4] flex items-center justify-center p-6">
         <img src={BakeryImg} alt="Bakery" className="max-w-md w-full object-contain" />
       </div>
 
@@ -87,14 +87,14 @@ const DeliverySection = ({ onDeliveryChange, deliveryData }) => {
         <div className="flex justify-center gap-10 mb-6 border-b">
           <button
             onClick={() => setDeliveryType("delivery")}
-            className={`pb-2 font-medium ${deliveryType === "delivery" ? "border-b-2 border-rose-400 text-rose-400" : "text-gray-500"
+            className={`pb-2 font-medium ${deliveryType === "delivery" ? "border-b-2 border-[#8C5A3C] text-[#8C5A3C]" : "text-gray-500"
               }`}
           >
             DELIVERY
           </button>
           <button
             onClick={() => setDeliveryType("pickup")}
-            className={`pb-2 font-medium ${deliveryType === "pickup" ? "border-b-2 border-rose-400 text-rose-400" : "text-gray-500"
+            className={`pb-2 font-medium ${deliveryType === "pickup" ? "border-b-2 border-[#2F6D66] text-[#2F6D66]" : "text-gray-500"
               }`}
           >
             PICKUP
